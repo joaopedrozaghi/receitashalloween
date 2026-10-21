@@ -636,6 +636,7 @@ body {
   box-shadow: 0 12px 30px rgba(255, 94, 0, 0.5);
   z-index: 40;
   display: none;
+  white-space: nowrap;
 }
 
 /* ===== Responsivo ===== */
