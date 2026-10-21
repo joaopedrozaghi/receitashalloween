@@ -36,35 +36,35 @@ body {
   background-attachment: fixed, fixed, fixed, fixed, fixed;
 }
 
-/* Moldura decorativa fixa nas bordas da página */
-.page-frame {
+/* Elementos flutuantes de Halloween no fundo */
+.floaties {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 60;
+  overflow: hidden;
+  z-index: 0;
 }
-.page-frame::before,
-.page-frame::after {
-  content: "";
+/* Conteúdo principal acima das floaties */
+.topbar, .hero, .badges, .section, .final-cta, .footer { position: relative; z-index: 1; }
+.floaty {
   position: absolute;
-  width: 170px;
-  height: 170px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.85;
+  left: var(--x);
+  bottom: -10%;
+  font-size: var(--s, 2rem);
+  opacity: 0.16;
+  filter: saturate(1.1) drop-shadow(0 4px 10px rgba(45, 20, 70, 0.15));
+  animation: rise var(--t, 30s) linear var(--d, 0s) infinite;
+  will-change: transform;
 }
-/* Teia no canto superior esquerdo */
-.page-frame::before {
-  top: 0;
-  left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%236d28d9' stroke-width='1.4' stroke-linecap='round' opacity='0.9'%3E%3Cpath d='M0 0 L100 100 M0 0 L80 8 M0 0 L8 80 M0 0 L60 30 M0 0 L30 60 M0 0 L45 12 M0 0 L12 45'/%3E%3Cpath d='M18 0 Q10 10 0 18'/%3E%3Cpath d='M38 0 Q22 22 0 38'/%3E%3Cpath d='M58 0 Q34 34 0 58'/%3E%3Cpath d='M80 0 Q46 46 0 80'/%3E%3C/g%3E%3C/svg%3E");
+@keyframes rise {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.18; }
+  50%  { transform: translateY(-55vh) translateX(18px) rotate(180deg); }
+  90%  { opacity: 0.18; }
+  100% { transform: translateY(-115vh) translateX(-12px) rotate(360deg); opacity: 0; }
 }
-/* Teia no canto superior direito (espelhada) */
-.page-frame::after {
-  top: 0;
-  right: 0;
-  transform: scaleX(-1);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ff6a00' stroke-width='1.4' stroke-linecap='round' opacity='0.9'%3E%3Cpath d='M0 0 L100 100 M0 0 L80 8 M0 0 L8 80 M0 0 L60 30 M0 0 L30 60 M0 0 L45 12 M0 0 L12 45'/%3E%3Cpath d='M18 0 Q10 10 0 18'/%3E%3Cpath d='M38 0 Q22 22 0 38'/%3E%3Cpath d='M58 0 Q34 34 0 58'/%3E%3Cpath d='M80 0 Q46 46 0 80'/%3E%3C/g%3E%3C/svg%3E");
+@media (prefers-reduced-motion: reduce) {
+  .floaty { animation: none; opacity: 0.1; }
 }
 
 .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; }
