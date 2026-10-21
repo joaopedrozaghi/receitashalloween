@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>+200 Receitas de Halloween Práticas — Doces, Petiscos e Sobremesas</title>
+  <meta name="description" content="E-book com mais de 200 receitas temáticas de Halloween: doces, salgados, bebidas e sobremesas aterrorizantes e fáceis. Acesso imediato, digital e imprimível." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Barra de contagem regressiva -->
+  <div class="topbar">
+    <span>⏰ A promoção dessa página acaba em</span>
+    <span class="countdown" id="countdown">00:00:00</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <span class="hero__kicker">🎃 Edição Especial de Halloween</span>
+        <h1 class="hero__title">+200 Receitas de Halloween <span class="hl">Práticas</span></h1>
+        <p class="hero__subtitle">Doces, petiscos e sobremesas temáticas para transformar sua festa na mais assustadora e gostosa do ano</p>
+        <p class="hero__desc">Receitas fáceis, ilustradas e passo a passo, prontas para impressionar os convidados — mesmo que você não tenha prática na cozinha.</p>
+
+        <ul class="trust">
+          <li>📱 Acesso imediato no WhatsApp</li>
+          <li>🔒 Compra 100% Segura</li>
+          <li>🛡️ 7 Dias de Garantia Total</li>
+        </ul>
+
+        <a href="#planos" class="btn btn--primary hero__cta">🎃 QUERO AS RECEITAS AGORA</a>
+        <p class="hero__micro">💳 Pagamento único · Acesso vitalício · Entregável digital em PDF imprimível</p>
+      </div>
+
+      <div class="hero__art">
+        <img src="Receitas de Halloween Aconchegantes.png" alt="E-book +365 Receitas de Halloween Práticas" loading="eager" />
+      </div>
+    </div>
+  </header>
+
+  <!-- SELOS -->
+  <section class="badges">
+    <div class="container badges__row">
+      <div class="badge-item"><span>⚡</span> Acesso Imediato</div>
+      <div class="badge-item"><span>📄</span> PDF Imprimível</div>
+      <div class="badge-item"><span>🔒</span> Compra Segura</div>
+      <div class="badge-item"><span>🛡️</span> Garantia de 7 Dias</div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Benefícios do Produto</h2>
+      <p class="section__sub">Tudo que você precisa para uma festa inesquecível</p>
+      <div class="benefits">
+        <div class="benefit"><span>🍬</span><p>+200 receitas doces e salgadas de Halloween</p></div>
+        <div class="benefit"><span>🎃</span><p>Pratos temáticos: abóbora, bruxas, monstros e fantasmas</p></div>
+        <div class="benefit"><span>📖</span><p>Receitas simples, ilustradas e passo a passo</p></div>
+        <div class="benefit"><span>🧁</span><p>Festa infantil, adulto e decoração comestível</p></div>
+        <div class="benefit"><span>🕸️</span><p>Ideias rápidas para impressionar os convidados</p></div>
+        <div class="benefit"><span>🧛</span><p>Fáceis para quem não tem prática na cozinha</p></div>
+        <div class="benefit"><span>🩸</span><p>Efeitos aterrorizantes com ingredientes comuns</p></div>
+        <div class="benefit"><span>📱</span><p>Acesso no celular, computador ou impresso</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DE RECEITAS -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Uma amostra do que você vai preparar</h2>
+      <p class="section__sub">Arraste para ver mais receitas 👉</p>
+      <div class="gallery-carousel" data-carousel>
+        <div class="gallery" data-carousel-track>
+        <figure class="gallery__item">
+          <img src="1.jpg" alt="Ovos recheados em formato de aranha" loading="lazy" />
+          <figcaption>
+            <h3>Ovos-Aranha Recheados</h3>
+            <p>Salgadinho fácil e assustador, perfeito para a mesa de petiscos</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="2.jpg" alt="Tábua de frios em formato de palhaço" loading="lazy" />
+          <figcaption>
+            <h3>Tábua de Frios Palhaço</h3>
+            <p>Centro de mesa impressionante para surpreender os convidados</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="3.jpg" alt="Bola de queijo em formato de olho ensanguentado" loading="lazy" />
+          <figcaption>
+            <h3>Olho Monstruoso de Queijo</h3>
+            <p>Patê cremoso com visual macabro e sabor irresistível</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="4.jpg" alt="Guacamole decorado com caveira e olhos" loading="lazy" />
+          <figcaption>
+            <h3>Guacamole Assombrado</h3>
+            <p>Dip cremoso e fresquinho com decoração de dar arrepios</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="9.jpg" alt="Coxinhas decoradas com gatinhos pretos de Halloween" loading="lazy" />
+          <figcaption>
+            <h3>Coxinhas da Bruxa</h3>
+            <p>O salgado que todo mundo ama, com um toque temático</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="5.jpg" alt="Buquê de marshmallows em formato de fantasma" loading="lazy" />
+          <figcaption>
+            <h3>Fantasminhas de Marshmallow</h3>
+            <p>Doce fofo e fácil que as crianças adoram fazer junto</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="6.jpg" alt="Copinhos de pavê em formato de túmulo" loading="lazy" />
+          <figcaption>
+            <h3>Pavê Cemitério</h3>
+            <p>Sobremesa cremosa no copinho com lápides de biscoito</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="7.jpg" alt="Bolo de chocolate com lápide RIP" loading="lazy" />
+          <figcaption>
+            <h3>Bolo Túmulo R.I.P.</h3>
+            <p>Bolo de chocolate assombrado, lindo e delicioso</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="8.jpg" alt="Shots de gelatina em formato de olho" loading="lazy" />
+          <figcaption>
+            <h3>Gelatina dos Olhos</h3>
+            <p>Sobremesa colorida e divertida que vira o hit da festa</p>
+          </figcaption>
+        </figure>
+        </div>
+        <div class="dots" data-carousel-dots></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL WHATSAPP -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Mensagens reais de quem já fez as receitas</h2>
+      <p class="section__sub">Arraste para ver mais mensagens do nosso WhatsApp 👉</p>
+      <div class="whats-carousel" data-carousel>
+        <div class="whats" data-carousel-track>
+          <figure class="whats__item">
+            <img src="whats1.png" alt="Depoimento no WhatsApp de Carol Rodriguez" loading="lazy" />
+          </figure>
+          <figure class="whats__item">
+            <img src="whats2.png" alt="Depoimento no WhatsApp de Letícia Nolene" loading="lazy" />
+          </figure>
+          <figure class="whats__item">
+            <img src="whats3.png" alt="Depoimento no WhatsApp de Ana Carol" loading="lazy" />
+          </figure>
+        </div>
+        <div class="dots" data-carousel-dots></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Veja o que estão dizendo das receitas</h2>
+      <p class="section__sub">Arraste para ver mais depoimentos 👉</p>
+      <div class="testimonials">
+        <article class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p>"Fiz as coxinhas da bruxa pra festa da minha filha e todo mundo ficou chocado. Pareciam de loja e sumiram em minutos!"</p>
+          <div class="t-card__author"><span class="t-card__avatar">MA</span><span><strong>Mariana A.</strong><br /><small>12 de outubro de 2025</small></span></div>
+        </article>
+        <article class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p>"A gelatina dos olhos foi o hit da noite. Simples de fazer e com um efeito assustador incrível. Recomendo demais."</p>
+          <div class="t-card__author"><span class="t-card__avatar">RF</span><span><strong>Rafael F.</strong><br /><small>3 de outubro de 2025</small></span></div>
+        </article>
+        <article class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p>"O bolo túmulo ficou lindo e delicioso. As fotos do passo a passo ajudaram muito a montar tudo certinho."</p>
+          <div class="t-card__author"><span class="t-card__avatar">CS</span><span><strong>Camila S.</strong><br /><small>28 de setembro de 2025</small></span></div>
+        </article>
+        <article class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p>"Comprei em cima da hora e consegui montar uma mesa temática completa no mesmo dia. Valeu cada centavo."</p>
+          <div class="t-card__author"><span class="t-card__avatar">PL</span><span><strong>Paulo L.</strong><br /><small>18 de outubro de 2025</small></span></div>
+        </article>
+        <article class="t-card">
+          <div class="t-card__stars">★★★★★</div>
+          <p>"Os fantasminhas de marshmallow são fofos e fáceis. Minhas crianças fizeram junto comigo e amaram."</p>
+          <div class="t-card__author"><span class="t-card__avatar">JB</span><span><strong>Juliana B.</strong><br /><small>21 de outubro de 2025</small></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">+ 200 receitas aterrorizantes</h2>
+      <p class="section__sub">Divididas em categorias completas:</p>
+      <ul class="categories">
+        <li><span>🎃</span> Doces de Abóbora &amp; Caramelo <strong>(35 receitas)</strong></li>
+        <li><span>🧁</span> Cupcakes &amp; Bolos Temáticos <strong>(30 receitas)</strong></li>
+        <li><span>🍪</span> Biscoitos de Bruxa &amp; Monstros <strong>(28 receitas)</strong></li>
+        <li><span>🍭</span> Balas, Pirulitos &amp; Guloseimas <strong>(25 receitas)</strong></li>
+        <li><span>🍕</span> Salgados Assustadores <strong>(27 receitas)</strong></li>
+        <li><span>🧪</span> Poções, Drinks &amp; Bebidas <strong>(22 receitas)</strong></li>
+        <li><span>👻</span> Sobremesas Fantasmagóricas <strong>(20 receitas)</strong></li>
+        <li><span>🕸️</span> Decoração Comestível &amp; Extras <strong>(13 receitas)</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Este cardápio é perfeito para você que:</h2>
+      <ul class="fit-list">
+        <li>✅ Quer impressionar na festa de Halloween sem gastar horas na cozinha</li>
+        <li>✅ Procura ideias criativas e temáticas que fogem do comum</li>
+        <li>✅ Vai receber crianças e quer guloseimas divertidas e seguras</li>
+        <li>✅ Quer montar uma mesa decorada e fotogênica para as redes</li>
+        <li>✅ Precisa de receitas rápidas para resolver em cima da hora</li>
+        <li>✅ Quer surpreender a família e os amigos com um toque assustador</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BÔNUS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">🎁 Presente Especial</h2>
+      <p class="section__sub">Compre agora e receba + 3 bônus exclusivos:</p>
+      <div class="bonuses">
+        <div class="bonus">
+          <span class="bonus__tag">BÔNUS 1</span>
+          <h3>Guia de Decoração Macabra</h3>
+          <p>Monte uma mesa temática completa com itens simples e baratos.</p>
+          <p class="bonus__price"><s>R$ 29,90</s> <strong>✓ Grátis Hoje</strong></p>
+        </div>
+        <div class="bonus">
+          <span class="bonus__tag">BÔNUS 2</span>
+          <h3>Drinks &amp; Poções Especiais</h3>
+          <p>Bebidas borbulhantes e coloridas para assustar e refrescar.</p>
+          <p class="bonus__price"><s>R$ 39,90</s> <strong>✓ Grátis Hoje</strong></p>
+        </div>
+        <div class="bonus">
+          <span class="bonus__tag">BÔNUS 3</span>
+          <h3>Lista de Compras Temática</h3>
+          <p>Todos os ingredientes certos para não errar na despensa.</p>
+          <p class="bonus__price"><s>R$ 24,90</s> <strong>✓ Grátis Hoje</strong></p>
+        </div>
+      </div>
+      <p class="bonus__total">💚 VALOR TOTAL DOS BÔNUS → TUDO GRÁTIS HOJE!</p>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="section section--alt" id="planos">
+    <div class="container">
+      <h2 class="section__title">Escolha seu plano</h2>
+      <p class="section__sub">Oferta especial por tempo limitado · Acesso imediato</p>
+
+      <div class="plans">
+        <div class="plan">
+          <h3 class="plan__name">Plano Básico</h3>
+          <p class="plan__desc">Apenas as +200 receitas de Halloween</p>
+          <p class="plan__price"><span>R$</span>19<small>,90</small></p>
+          <a href="#" class="btn btn--ghost">Quero esse</a>
+        </div>
+
+        <div class="plan plan--featured">
+          <span class="plan__badge">MAIS ESCOLHIDO</span>
+          <h3 class="plan__name">Plano Completo</h3>
+          <p class="plan__desc">+200 receitas + os 3 bônus exclusivos</p>
+          <p class="plan__old">de R$ 94,60 por</p>
+          <p class="plan__price"><span>R$</span>27<small>,90</small></p>
+          <a href="#" class="btn btn--primary">🎃 Comprar Agora</a>
+          <p class="plan__note">Pagamento único · Acesso vitalício</p>
+        </div>
+      </div>
+
+      <p class="plans__foot">📲 Acesso imediato após a compra · Oferta válida por tempo limitado</p>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="section">
+    <div class="container social">
+      <h2 class="section__title">8.000+ pessoas já assustaram suas festas</h2>
+      <p class="section__sub">Veja o que quem já comprou está falando.</p>
+      <div class="social__rating">
+        <span class="social__score">4.9</span>
+        <span class="social__stars">★★★★★</span>
+        <span class="social__count">3.541 avaliações</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO RECEBER -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Como você vai RECEBER</h2>
+      <p class="section__sub">Acesso liberado na hora, do seu jeitinho ✨</p>
+      <div class="delivery">
+        <div class="delivery__item"><span>📱</span><h4>No Celular</h4><p>Acesse onde estiver</p></div>
+        <div class="delivery__item"><span>💻</span><h4>No Computador</h4><p>Tela grande pra cozinhar</p></div>
+        <div class="delivery__item"><span>🖨️</span><h4>Para Imprimir</h4><p>Seu caderno de receitas</p></div>
+        <div class="delivery__item"><span>⚡</span><h4>Envio Imediato</h4><p>Liberado em segundos</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <img class="guarantee__seal-img" src="7dias de garantia.png" alt="Selo de garantia de 7 dias" loading="lazy" />
+        <div class="guarantee__text">
+          <h3>Garantia incondicional de 7 dias</h3>
+          <p>Faça as receitas, teste tudo e, se por qualquer motivo você não gostar, basta enviar uma mensagem dentro de 7 dias e devolvemos 100% do seu dinheiro. O risco é todo nosso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Dúvidas Frequentes</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Como recebo as receitas após a compra?</summary>
+          <p>O acesso é liberado imediatamente após a confirmação do pagamento, enviado por e-mail e WhatsApp. Você pode acessar pelo celular, computador ou imprimir.</p>
+        </details>
+        <details class="faq__item">
+          <summary>As receitas são difíceis de fazer?</summary>
+          <p>Não. Todas foram pensadas para serem simples, com passo a passo ilustrado e ingredientes fáceis de encontrar, mesmo para quem não tem prática.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Preciso de ingredientes especiais ou caros?</summary>
+          <p>Não. A maioria usa ingredientes comuns de supermercado. Os efeitos assustadores são criados com truques simples de preparo e decoração.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Serve para festa infantil?</summary>
+          <p>Sim! Há receitas divertidas e seguras para crianças, além de opções mais elaboradas para o público adulto.</p>
+        </details>
+        <details class="faq__item">
+          <summary>E se eu não gostar?</summary>
+          <p>Você tem 7 dias de garantia total. Se não gostar, basta pedir o reembolso e devolvemos 100% do valor.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pronta para a festa mais assustadora do ano? 🎃</h2>
+      <p>Garanta agora suas +200 receitas de Halloween com acesso imediato.</p>
+      <a href="#planos" class="btn btn--primary">🎃 QUERO MINHAS RECEITAS</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>🎃 +200 Receitas de Halloween — Edição Especial</p>
+      <p class="footer__small">Este produto não garante resultados e não substitui orientação profissional. Página de demonstração.</p>
+    </div>
+  </footer>
+
+  <!-- CTA fixo mobile -->
+  <a href="#planos" class="sticky-cta">🎃 Quero as Receitas</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
