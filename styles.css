@@ -21,13 +21,56 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+  background-color: #fbf6ef;
+  background-image:
+    radial-gradient(1100px 520px at 50% -8%, #ffe3c2 0%, rgba(255, 227, 194, 0) 62%),
+    radial-gradient(900px 600px at 100% 12%, #f1e3ff 0%, rgba(241, 227, 255, 0) 55%),
+    radial-gradient(900px 600px at 0% 42%, #ffeede 0%, rgba(255, 238, 222, 0) 55%),
+    radial-gradient(1000px 700px at 50% 108%, #efe0ff 0%, rgba(239, 224, 255, 0) 60%),
+    radial-gradient(circle at 1px 1px, rgba(109, 40, 217, 0.07) 1px, transparent 0);
+  background-size: auto, auto, auto, auto, 24px 24px;
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
 }
 
-.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+/* Moldura decorativa fixa nas bordas da página */
+.page-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+.page-frame::before,
+.page-frame::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.85;
+}
+/* Teia no canto superior esquerdo */
+.page-frame::before {
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%236d28d9' stroke-width='1.4' stroke-linecap='round' opacity='0.9'%3E%3Cpath d='M0 0 L100 100 M0 0 L80 8 M0 0 L8 80 M0 0 L60 30 M0 0 L30 60 M0 0 L45 12 M0 0 L12 45'/%3E%3Cpath d='M18 0 Q10 10 0 18'/%3E%3Cpath d='M38 0 Q22 22 0 38'/%3E%3Cpath d='M58 0 Q34 34 0 58'/%3E%3Cpath d='M80 0 Q46 46 0 80'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* Teia no canto superior direito (espelhada) */
+.page-frame::after {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ff6a00' stroke-width='1.4' stroke-linecap='round' opacity='0.9'%3E%3Cpath d='M0 0 L100 100 M0 0 L80 8 M0 0 L8 80 M0 0 L60 30 M0 0 L30 60 M0 0 L45 12 M0 0 L12 45'/%3E%3Cpath d='M18 0 Q10 10 0 18'/%3E%3Cpath d='M38 0 Q22 22 0 38'/%3E%3Cpath d='M58 0 Q34 34 0 58'/%3E%3Cpath d='M80 0 Q46 46 0 80'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; }
+
+/* Deixa as seções com fundo semitransparente para o gradiente aparecer */
+.section--alt { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(2px); }
 
 /* ===== Topbar / contagem ===== */
 .topbar {
@@ -90,10 +133,7 @@ body {
 /* ===== Hero ===== */
 .hero {
   padding: 54px 0 56px;
-  background:
-    radial-gradient(900px 440px at 78% 0%, #ffe6cf 0%, rgba(255,230,207,0) 60%),
-    radial-gradient(700px 420px at 10% 30%, #efe3ff 0%, rgba(239,227,255,0) 60%),
-    var(--bg);
+  background: transparent;
 }
 .hero__grid {
   display: grid;
@@ -185,7 +225,6 @@ body {
 
 /* ===== Seções ===== */
 .section { padding: 62px 0; }
-.section--alt { background: var(--surface); }
 .section__title {
   font-family: "Poppins", "Inter", sans-serif;
   font-size: clamp(1.55rem, 4vw, 2.2rem);
