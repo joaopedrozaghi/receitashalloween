@@ -1,37 +1,31 @@
-// Contagem regressiva: expira à meia-noite do próximo dia 31/10
+// Contagem regressiva: começa em 15 minutos e reinicia ao zerar
 (function () {
   var el = document.getElementById("countdown");
   if (!el) return;
 
-  function nextDeadline() {
-    var now = new Date();
-    // Define o alvo para o dia 31/10 deste ano às 23:59:59
-    var target = new Date(now.getFullYear(), 9, 31, 23, 59, 59);
-    // Se já passou, usa o ano seguinte
-    if (target.getTime() < now.getTime()) {
-      target = new Date(now.getFullYear() + 1, 9, 31, 23, 59, 59);
-    }
-    return target;
-  }
+  // Duração total do contador, em segundos (15 minutos)
+  var DURATION = 15 * 60;
 
-  var deadline = nextDeadline();
+  // Mantém o tempo restante persistente na aba para não reiniciar a cada refresh
+  var stored = parseInt(sessionStorage.getItem("promo_deadline"), 10);
+  var deadline = (!isNaN(stored) && stored > Date.now()) ? stored : Date.now() + DURATION * 1000;
+  sessionStorage.setItem("promo_deadline", deadline);
 
   function pad(n) { return String(n).padStart(2, "0"); }
 
   function tick() {
-    var now = new Date().getTime();
-    var diff = deadline.getTime() - now;
+    var diff = Math.floor((deadline - Date.now()) / 1000);
 
     if (diff <= 0) {
-      el.textContent = "00:00:00";
-      return;
+      // Reinicia o contador
+      deadline = Date.now() + DURATION * 1000;
+      sessionStorage.setItem("promo_deadline", deadline);
+      diff = DURATION;
     }
 
-    var totalHours = Math.floor(diff / (1000 * 60 * 60));
-    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    el.textContent = pad(totalHours) + ":" + pad(minutes) + ":" + pad(seconds);
+    var minutes = Math.floor(diff / 60);
+    var seconds = diff % 60;
+    el.textContent = pad(minutes) + ":" + pad(seconds);
   }
 
   tick();
